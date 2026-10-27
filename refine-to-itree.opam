@@ -1,0 +1,20 @@
+opam-version: "2.0"
+synopsis: "Proof-driven Fibonacci derivation with observable cost"
+description: """
+A Rocq development deriving a naive recursive Fibonacci implementation with
+checked functional correctness, termination, and an exponential cost bound.
+"""
+maintainer: "Yao Li <hnkfliyao@gmail.com>"
+authors: "Yao Li"
+depends: [
+  "rocq-core" {= "9.2.0"}
+  "rocq-stdlib" {= "9.2.0"}
+  "coq-itree" {= "5.2.1"}
+  "coq-ext-lib" {= "0.13.2"}
+  "coq-paco" {= "4.2.3"}
+  "conf-python-3" {with-test}
+  "conf-clang" {with-test}
+]
+build: [make "-j%{jobs}%" "all"]
+install: [make "install"]
+run-test: [make "check"]

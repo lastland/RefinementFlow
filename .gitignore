@@ -1,0 +1,20 @@
+# Generated Makefiles and dependency information.
+/Makefile.coq
+/Makefile.coq.conf
+/.Makefile.coq.d
+
+# Rocq compilation artifacts and arithmetic tactic caches.
+/theories/*.vo
+/theories/*.vos
+/theories/*.vok
+/theories/*.glob
+/theories/.*.aux
+/theories/.coq-native/
+.lia.cache
+.nia.cache
+
+# Python verification tooling.
+__pycache__/
+
+# JSON extraction, generated C/headers, native binaries, and check evidence.
+/build/
